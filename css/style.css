@@ -4,7 +4,7 @@ font-family: Arial, sans-serif; /* Sets the default font style */
 margin: 0;
 padding: 0;
 text-align: center; /* Centers text globally */
-
+}
 /* Header Styling */
 header {
 display: flex; /* Uses flexbox for layout */
