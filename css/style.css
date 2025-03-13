@@ -1,1 +1,28 @@
+/* Reset default margin and padding for a consistent layout */
+body {
+font-family: Arial, sans-serif; /* Sets the default font style */
+margin: 0;
+padding: 0;
+text-align: center; /* Centers text globally */
 
+/* Header Styling */
+header {
+display: flex; /* Uses flexbox for layout */
+justify-content: space-between; /* Pushes content to opposite sides */
+align-items: center; /* Aligns items vertically */
+padding: 20px;
+background-color: #f4f4f4; /* Light grey background */
+border-bottom: 2px solid #ddd; /* Adds a subtle bottom border */
+}
+Logo Styling
+.logo {
+max-width: 100px; /* Restricts logo size */
+
+}
+
+}
+
+/* Navigation Bar Styling */
+nav {
+background-color: #333; /* Dark background for contrast */
+padding: 10px;
