@@ -1,6 +1,6 @@
 /* Reset default margin and padding for a consistent layout */
 body {
-font-family: Arial, sans-serif; /* Sets the default font style */
+font-family: copperplate, fantasy; /* Sets the default font style */
 margin: 0;
 padding: 0;
 text-align: center; /* Centers text globally */
@@ -20,7 +20,6 @@ max-width: 100px; /* Restricts logo size */
 
 }
 
-}
 
 /* Navigation Bar Styling */
 nav {
