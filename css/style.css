@@ -1,86 +1,68 @@
-/* Reset default margin and padding for a consistent layout */
 body {
-font-family: copperplate, fantasy; /* Sets the default font style */
-margin: 0;
-padding: 0;
-text-align: center; /* Centers text globally */
-}
-/* Header Styling */
-header {
-display: flex; /* Uses flexbox for layout */
-justify-content: space-between; /* Pushes content to opposite sides */
-align-items: center; /* Aligns items vertically */
-padding: 20px;
-background-color: #274c77; /* Navy background*/
-border-bottom: 2px solid #ddd; /* Adds a subtle bottom border */
-}
-Logo Styling
-.logo {
-max-width: 100px; /* Restricts logo size */
-
+    margin: 0px;
 }
 
-
-/* Navigation Bar Styling */
-nav {
-background-color: #333; /* Dark background for contrast */
-padding: 10px;
-}
-nav a {
-color: white; /* Sets text color */
-text-decoration: none; /* Removes underline from links */
-margin: 0 10px; /* Adds spacing between links */
-
-/* Main Content Section Styling */
-.mainpage {
-background-color: black;
-color: white; /* Ensures text is visible */
-padding: 20px; /* Optional: Adds spacing inside */
-
-.content {
-background-color: #f9f9f9; /* Light gray background */
-padding: 20px; /* Add space inside the main section */
-border-radius: 10px; /* Rounded corners */
-text-align: center; /* Center text */
-width: 100%; /* Full width */
-max-width: 100%; /* Ensure it doesn't exceed the viewport */
-margin: 0 auto; /* Center horizontally */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-border: 2px solid #2c3e50; /* Dark blue-gray border */
-
+main {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.content h2 {
-color: #333; /* Dark gray color for heading */
-font-size: 24px; /* Adjust font size */
-
+h1 {
+    text-align: center;
+    position: relative; /* Keeps it above the image */
+    color: white; /* Ensures readability */
+    margin: 0; /* Removes default margin */
+    padding: 40px 0; /* Adjust padding to fit within the image */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.content p {
-color: #666; /* Medium gray for paragraph text */
-font-size: 16px; /* Adjust font size */
-line-height: 1.5; /* Improve readability */
-max-width: 80%; /* Limit text width for better readability */
-margin: 0 auto; /* Center text */
-}
-.sections {
-display: flex; /* Enables side-by-side layout */
-justify-content: space-around; /* Spaces sections evenly */
-padding: 20px;
-
-/* Individual Section Styling */
-.section {
-width: 45%; /* Sets equal width for both sections */
-padding: 20px;
-border: 1px solid #ddd; /* Adds a subtle border */
-background-color: #f9f9f9; /* Light background for readability */
-}
-/* Footer Styling */
-footer {
-background-color: #333; /* Matches nav bar */
-color: white; /* White text for contrast */
-padding: 10px;
-position: relative;
-
+.banner {
+    width: 100%; /* Full width */
+    height: 120px; /* Adjusted to fit h1 and navbar */
+    object-fit: cover; /* Prevents distortion */
+    position: absolute; /* Stays at the top */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Moves behind h1 */
 }
 
+.navbar ul {
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    position: relative; /* Ensures navbar stays above the image */
+    padding: 10px 0; /* Adds slight padding to prevent overlap */
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: hsl(0, 0%, 10%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+.p1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
