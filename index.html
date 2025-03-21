@@ -1,37 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slovenské Vzdelávacie Centrum</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Slovenské Vzdelávacie Centrum</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <img src="https://th.bing.com/th/id/R.0bb26bd310cc9fb0e3ae65f22cdbd123?rik=nJs9lBZbQ2xkHw&pid=ImgRaw&r=0" alt="Banner Image" class="banner">
+  <!-- Background Video -->
+  <video class="bg-video" autoplay loop muted playsinline>
+    <source src="https://cdn.pixabay.com/video/2021/08/24/86242-591841114_large.mp4" type="video/mp4">
+  </video>
+  <!-- Video Overlay for better readability -->
+  <div class="video-overlay"></div>
 
-    <h1>Slovenské Vzdelávacie Centrum</h1>
+  <!-- Page container for sticky footer layout -->
+  <div class="page-container">
 
+    <!-- A container to hold the banner and heading together -->
+    <div class="header-container">
+      <img 
+        src="https://th.bing.com/th/id/R.0bb26bd310cc9fb0e3ae65f22cdbd123?rik=nJs9lBZbQ2xkHw&pid=ImgRaw&r=0" 
+        alt="Banner Image" 
+        class="banner"
+      >
+      <h1>Slovenské Vzdelávacie Centrum</h1>
+    </div>
+
+    <!-- Navigation -->
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="products.html">Courses</a></li>
-            <li><a href="contact.html">Membership</a></li>
-       <li><a href="contact.html">Education games</a></li>
-            <li><a href="contact.html">Events</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Courses</a></li>
+        <li><a href="contact.html">Membership</a></li>
+        <li><a href="contact.html">Education Games</a></li>
+        <li><a href="contact.html">Events</a></li>
+      </ul>
     </nav>
 
+    <!-- Main content -->
     <main>
-        <h3>Welcome to Slovenské Vzdelávacie Centrum!</h3>
-        <p class="p1">Slovenské Vzdelávacie Centrum – South Manchester was founded by a group of dedicated teachers who shared a common vision—to establish a Slovak educational and cultural centre that truly makes a difference.
-With a passion for teaching, culture, and community-building, we worked tirelessly to create a space where Slovak families could access quality education and cultural activities. At Slovenské Vzdelávacie Centrum – South Manchester, we provide Slovak language education, organise cultural events, and support Slovak-speaking families in navigating life between the UK and Slovakia. Whether you're here to learn, stay connected to your roots, or find support, we are here for you.
+      <h3 class="mainhead">Welcome to Slovenské Vzdelávacie Centrum!</h3>
 
-</p>
-    
+      <!-- Flex container for text and image -->
+      <div class="content-container">
+        <!-- Text Content -->
+        <div class="text-content">
+          <!-- First paragraph: remove top margin so it aligns with the image at the top -->
+          <p class="p1 boxed-text first-paragraph">
+            Slovenské Vzdelávacie Centrum – South Manchester is a registered charity dedicated to preserving and promoting Slovak language and culture. We provide Slovak language education and organize cultural and community activities to help Slovak-speaking families maintain their heritage while living abroad.
+          </p>
+          <p class="p1 boxed-text">
+            Our mission goes beyond just teaching the Slovak language. We are here to keep our heritage alive, to ensure that children growing up abroad don’t lose their connection to their roots, and to create a place where Slovak culture thrives—even far from home.
+          </p>
+          <p class="p1 boxed-text">
+            Education is at the heart of what we do, but our purpose extends even further. We are here to bridge the gap between the UK and Slovak education systems, ensuring that children who may one day return to Slovakia can transition smoothly. We are here to support families, guide them, and make sure no one feels lost when navigating life between two countries.
+          </p>
+        </div>
+
+        <!-- Image that should stay at the top on large screens -->
+        <img 
+          src="https://scontent.fman5-1.fna.fbcdn.net/v/t39.30808-6/462361085_934509215374161_3367945199237958431_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lVi8VYgNW0IQ7kNvgEgkhI8&_nc_oc=AdgNKHefpYXulBThKaUVIGLm3aaZlsN4fqQp2lq3fuWtjTg_Nva5j2yFLgpwG2X2zVo&_nc_zt=23&_nc_ht=scontent.fman5-1.fna&_nc_gid=iEmGbLrAk237LiU1lgCbXQ&oh=00_AYG1U_mDHA6PqrxXA6e3KRZRVJAoqMt8nUEtApNfLUQXkw&oe=67DDD626"
+          class="img1"
+          alt="Responsive image"
+        >
+      </div>
     </main>
+
+    <!-- Footer (will stay at bottom of viewport if not enough content) -->
+    <footer class="footer">
+      <p>© 2025 Slovenské Vzdelávacie Centrum. All rights reserved.</p>
+    </footer>
+
+  </div> <!-- End of page-container -->
 
 </body>
 </html>
