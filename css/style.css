@@ -1,3 +1,4 @@
+/* ====== RESET / BASE STYLES FOR STICKY FOOTER ====== */
 html, body {
   height: 100%;            /* Ensures body fills the screen height */
   margin: 0;
@@ -106,6 +107,7 @@ main {
   display: block;
   text-align: center;
   transition: 0.3s ease-in-out;
+  font-size: 20px;
 }
 
 .navbar a:hover {
@@ -151,6 +153,7 @@ h3 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   color: #fff;
+  font-size: 18px;
 }
 
 /* Image styling; remains at the top on large screens */
@@ -159,6 +162,32 @@ h3 {
   align-self: flex-start;
   max-width: 400px;
   width: 100%;
+}
+
+/* ====== CALL-TO-ACTION SECTION ====== */
+.cta-section {
+  background: url('https://via.placeholder.com/1200x400') no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.donate-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* ====== FOOTER ====== */
@@ -201,13 +230,16 @@ h3 {
     padding: 10px 15px;
   }
 }
+
 .mainhead {
   color: white;
 }
+
 h1 {
   font-size: 40px;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
 }
+
 h3 {
-  font-size: 25px;
+  font-size: 30px;
 }
