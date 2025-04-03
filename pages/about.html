@@ -1,8 +1,10 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Slovenské Vzdelávacie Centrum</title>
+  <!-- Ensures proper responsiveness on mobile and tablet -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
@@ -48,13 +50,23 @@
         <!-- Text Content -->
         <div class="text-content">
           <p class="p1 boxed-text first-paragraph">
-            Slovenské Vzdelávacie Centrum – South Manchester was founded by a group of dedicated teachers who shared a common vision—to establish a Slovak educational and cultural centre that truly makes a difference.
+            Slovenské Vzdelávacie Centrum – South Manchester was founded by a group of dedicated teachers who shared a common vision—to establish a Slovak educational and cultural centre that truly makes a difference.<br><br>
             With a passion for teaching, culture, and community-building, we worked tirelessly to create a space where Slovak families could access quality education and cultural activities.
-            After months of hard work, we were proud to become a registered charity on 9th September 2024, marking a significant step in our journey. Our official launch on 15th September was a proud moment, celebrated in collaboration with the Faculty of Education from Univerzita Mateja Bela and the Association of Slovak Schools and Community Centres in the UK.
+            After months of hard work, we were proud to become a registered charity on 9th September 2024, marking a significant step in our journey.<br><br>
+            Our official launch on 15th September was a proud moment, celebrated in collaboration with the Faculty of Education from Univerzita Mateja Bela and the Association of Slovak Schools and Community Centres in the UK.
           </p>
-          <p class="p1 boxed-text">
-            Our mission goes beyond just teaching the Slovak language. We are here to keep our heritage alive, to ensure that children growing up abroad don’t lose their connection to their roots, and to create a place where Slovak culture thrives—even far from home.
-          </p>
+          
+          <!-- Responsive YouTube Video -->
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/cZeZrxymqmo" 
+                    title="CULTURE SHOCKS in Slovakia" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+            </iframe>
+          </div>
+          
         </div>
 
         <!-- Primary Image -->
@@ -63,19 +75,10 @@
           class="img1"
           alt="Responsive image"
         >
-        
-        <!-- Secondary Image (to be moved left via CSS) -->
-        <div class="img2left-side">
-          <img 
-            src="https://images.pexels.com/photos/31212650/pexels-photo-31212650/free-photo-of-mountain-lodge-by-a-serene-river-in-summer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-            alt="Responsive image 2" 
-            class="responsive-image"
-          >
-        </div>
       </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (will stay at bottom of viewport if not enough content) -->
     <footer class="footer">
       <p>© 2025 Slovenské Vzdelávacie Centrum. All rights reserved.</p>
     </footer>
@@ -84,4 +87,3 @@
 
 </body>
 </html>
-
