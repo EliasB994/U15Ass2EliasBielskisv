@@ -1,1 +1,283 @@
+/* ====== RESET / BASE STYLES FOR STICKY FOOTER ====== */
+html, body {
+  height: 100%;            /* Ensures body fills the screen height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  /* Remove background-color so the video shows through */
+  background: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Background Video Styling */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* Ensures the video covers the area without distortion */
+  z-index: -100;        /* Places the video behind all content */
+  pointer-events: none; /* Ensures video doesn't interfere with user interactions */
+}
+
+/* Dark overlay for better readability */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity for desired darkness */
+  z-index: -50;        /* Sits above the video but behind page content */
+  pointer-events: none;
+}
+
+/* ====== PAGE CONTAINER FOR STICKY FOOTER ====== */
+.page-container {
+  min-height: 100vh;       /* Full viewport height */
+  display: flex;
+  flex-direction: column;  /* Stack elements vertically */
+  position: relative;      /* Ensure stacking context above the fixed video */
+  background: transparent;
+}
+
+/* Main should expand to fill space so footer sits at bottom */
+main {
+  flex: 1;                 /* Main content takes up remaining space */
+  margin: 10px 20px;
+}
+
+/* ====== HEADER & BANNER ====== */
+.header-container {
+  position: relative;
+  text-align: center;
+  margin: 0;             /* Ensure no gap above or below */
+  min-height: 200px;     /* Provide enough space for banner + heading */
+  overflow: hidden;      /* Prevents banner from overflowing container */
+  background: transparent;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;         /* Fill the entire header-container */
+  object-fit: cover;    /* Keep image proportions while filling container */
+  z-index: 0;           /* Behind the heading */
+}
+
+.header-container h1 {
+  position: relative;
+  margin: 0;
+  padding: 60px 0;      /* Space to center heading over banner */
+  color: white;
+  z-index: 1;           /* On top of the banner */
+}
+
+/* ====== NAVIGATION BAR ====== */
+.navbar {
+  background-color: #274C77;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li {
+  /* No additional styling needed */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 25px;
+  display: block;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+/* ====== CONTENT CONTAINER (TEXT + IMAGE) ====== */
+h3 {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+/* Flex container for text and images side by side */
+.content-container {
+  display: flex;
+  align-items: flex-start; /* Align image and text at the top */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Text container grows more than the image container */
+.text-content {
+  flex: 3;
+}
+
+/* Paragraph styling */
+.p1 {
+  width: 100%;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Remove top margin from the first paragraph to align with image top */
+.first-paragraph {
+  margin-top: 0 !important;
+}
+
+/* Boxed styling for paragraphs */
+.boxed-text {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: rgba(96, 150, 186, 0.5); /* 0.5 = background opacity */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  
+  /* Ensures long words or URLs wrap properly instead of overflowing */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Primary Image Styling; remains at the top on large screens */
+.img1 {
+  flex: 1;
+  align-self: flex-start;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Responsive image styling */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;      /* Optional: for rounded corners */
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  /* .page-container flex layout keeps it at bottom if there's not enough content */
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .img1 {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+  
+  .img2left-side {
+    order: 0; /* Reset order for mobile layout */
+    display: flex;
+    justify-content: flex-start; /* Aligns image to the left */
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* Adjust width as needed */
+    border-radius: 10px;
+  }
+
+  .boxed-text {
+    margin: 20px auto;
+    max-width: 90%;
+  }
+}
+
+/* OPTIONAL: Additional tablet-specific tweaks between 769px and 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Example: reduce gap or allow wrapping if needed */
+  .content-container {
+    flex-wrap: wrap;  /* Let items wrap if space is tight */
+  }
+
+  .text-content {
+    flex: 2;          /* Let text take more space to avoid vertical chopping */
+  }
+
+  .img1, .img2left-side {
+    flex: 1;          /* Each image can take up equal space */
+    max-width: 30%;   /* Adjust as needed to prevent text from shrinking too much */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container h1 {
+    font-size: 1.4rem;
+    padding: 20px 0;
+  }
+
+  .navbar a {
+    padding: 10px 15px;
+  }
+}
+
+.mainhead {
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+h3 {
+  font-size: 30px;
+}
+
+/* ====== RESPONSIVE YOUTUBE VIDEO EMBED ====== */
+/* The container keeps the 16:9 aspect ratio and allows the iframe to scale */
+.video-container {
+  position: relative;
+  width: 100%;            /* Full width relative to its parent */
+  max-width: 800px;       /* Optional: Limit maximum width on large screens */
+  margin: 20px auto;      /* Center the video and add vertical spacing */
+  padding-top: 56.25%;    /* 16:9 Aspect Ratio (9/16 * 100) */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
