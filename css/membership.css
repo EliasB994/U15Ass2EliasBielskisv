@@ -29,33 +29,6 @@ h2 {
   background-color: #274C77;
 }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navbar li {
-  /* No additional styling needed */
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 25px;
-  display: block;
-  text-align: center;
-  transition: 0.3s ease-in-out;
-  font-size: 20px;
-}
-
-.navbar a:hover {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
-}
-
 /* ====== CONTENT CONTAINER (TEXT + IMAGE) ====== */
 h3 {
   margin-top: 0;
