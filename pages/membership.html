@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membership Form</title>
+  <link rel="stylesheet" href="../css/membership.css">
+</head>
+<body>
+  <div class="container">
+    <form id="membershipForm" novalidate>
+      <h2>Membership Registration</h2>
+      
+      <label for="firstName">Name</label>
+      <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+      
+      <label for="lastName">Surname</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Your surname" required>
+      
+      <label for="dob">Date of Birth (DD/MM/YYYY)</label>
+      <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY" required>
+      
+      <label for="monthlyPayment">Monthly Payment (£)</label>
+      <input type="number" id="monthlyPayment" name="monthlyPayment" placeholder="Amount" min="0" step="1" required>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
 
