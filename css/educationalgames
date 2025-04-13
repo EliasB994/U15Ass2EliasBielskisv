@@ -1,3 +1,4 @@
+/* ====== RESET / BASE STYLES FOR STICKY FOOTER ====== */
 html, body {
   height: 100%;            /* Ensures body fills the screen height */
   margin: 0;
