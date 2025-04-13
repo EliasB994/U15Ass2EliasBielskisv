@@ -25,23 +25,6 @@ h2 {
   margin-bottom: 1.5rem;
 }
 /* ====== NAVIGATION BAR ====== */
-.navbar {
-  background-color: #274C77;
-}
-
-/* ====== CONTENT CONTAINER (TEXT + IMAGE) ====== */
-h3 {
-  margin-top: 0;
-  padding-top: 20px;
-}
-
-/* Flex container for text and images side by side */
-.content-container {
-  display: flex;
-  align-items: flex-start; /* Align image and text at the top */
-  gap: 20px;
-  margin-top: 20px;
-}
 
 form {
   display: flex;
